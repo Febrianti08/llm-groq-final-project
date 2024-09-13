@@ -4,7 +4,6 @@ import requests
 import pandas as pd
 from datetime import date, timedelta
 from collections import defaultdict
-from dotenv import load_dotenv
 from langchain_core.tools import tool
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain.memory import ConversationBufferMemory
