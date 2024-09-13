@@ -15,10 +15,14 @@ from langchain.callbacks import StreamlitCallbackHandler
 import streamlit as st
 from langchain_community.tools import DuckDuckGoSearchRun
 
-load_dotenv() # load your .env file
-GROQ_API_KEY = os.getenv("GROQ_API_KEY")
-SECTORS_API_KEY = os.getenv("SECTORS_API_KEY")
-CALENDAR_API_KEY = os.getenv("CALENDAR_API_KEY")
+# load_dotenv() # load your .env file
+# GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+# SECTORS_API_KEY = os.getenv("SECTORS_API_KEY")
+# CALENDAR_API_KEY = os.getenv("CALENDAR_API_KEY")
+GROQ_API_KEY = st.secrets['GROQ_API_KEY']
+SECTORS_API_KEY = st.secrets['SECTORS_API_KEY']
+CALENDAR_API_KEY = st.secrets['CALENDAR_API_KEY']
+
 
 def retrieve_from_endpoint(url: str) -> dict:
     """
